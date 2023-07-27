@@ -1,0 +1,78 @@
+<nav
+  class="container relative flex items-center justify-between justify-self-center px-5 pb-2 pt-4">
+  <div>
+    <a href="/home">
+      <h1 class="font-display text-5xl font-semibold">Wollfeuer</h1>
+    </a>
+  </div>
+  <ul class="hidden space-x-8 md:flex">
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/about">Über mich</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/spinning">Spinnen</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/coloring">Färben</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/courses">Kurse</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/markets">Märkte</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/gallery">Galerie</a>
+    </li>
+  </ul>
+  <div
+    id="hamburger-menu"
+    class="flex w-6 cursor-pointer flex-col space-y-1 transition-all duration-200 hover:space-y-[0.3rem] md:hidden">
+    <span class="h-0.5 w-6 bg-black"></span><span class="h-0.5 w-6 bg-black"
+    ></span><span class="h-0.5 w-6 bg-black"></span>
+  </div>
+  <ul
+    id="mobile-menu"
+    class="absolute right-1 top-14 z-10 hidden space-y-3 rounded-sm bg-brown px-8 py-2">
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/about">Über mich</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/spinning">Spinnen</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/coloring">Färben</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/courses">Kurse</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/markets">Märkte</a>
+    </li>
+    <li
+      class="underline-offset-2 transition-all duration-200 hover:text-gray-800 hover:underline">
+      <a href="/gallery">Galerie</a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const hamburger = document.getElementById("hamburger-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+  let hamburgerToggle = false;
+  hamburger.addEventListener("click", () =>
+    mobileMenu.classList.toggle("hidden")
+  );
+  console.log(hamburgerToggle);
+</script>

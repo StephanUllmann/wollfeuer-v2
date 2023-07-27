@@ -1,81 +1,38 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import cauldronOutlines from "../assets/cauldron-outlines.png";
+import { Image } from "@astrojs/image/components";
+import { getImage } from "@astrojs/image";
+
+const { src } = await getImage({
+  src: import("../assets/wool-bg.jpg"),
+  alt: "My hero image",
+});
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<!-- bg-barley-corn-600 -->
+<Layout title="Wollfeuer | Home">
+  <main class="w-full">
+    <div
+      class="h-96 w-full bg-barley-corn-600 bg-[url('/background-wool-neutral-2.webp')] bg-cover bg-fixed bg-center bg-blend-overlay">
+      <div
+        class="flex h-96 flex-col items-center justify-center bg-topBottomShade">
+        <Image
+          class="rounded-xl bg-barley-corn-100/20 px-1 py-1 drop-shadow-md backdrop-blur-sm"
+          height={374}
+          src={cauldronOutlines}
+          alt="Wollkessel"
+          format="avif"
+          aspectRatio="470:873"
+        />
+      </div>
+    </div>
+    <h1 class="my-8 text-center text-3xl" style={{ textWrap: "balance" }}>
+      Begeisterung ist der Anfang aller Wunder<br />&<br />der Atem der Seele.
+    </h1>
+  </main>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <!-- , linear-gradient(285deg,hsl(34deg 26% 49% / 0.2) 0%,hsl(34deg 30% 52% / 0.2) 20%,hsl(34deg 36% 56% / 0.2) 51%,hsl(34deg 44% 59% / 0.2) 83%,hsl(34deg 53% 58% / 0.2) 100%) -->
+  <!-- bg-[url('/wool-bg.jpg')] -->
+  <!-- style={{backgroundImage: `url(${src})`}} -->
+</Layout>

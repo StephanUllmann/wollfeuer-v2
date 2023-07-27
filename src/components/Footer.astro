@@ -1,0 +1,14 @@
+---
+import Spiral from "../assets/spiral.png"
+import { Image } from '@astrojs/image/components';
+---
+
+<footer class="bg-barley-corn-950 w-full text-barley-corn-50 flex justify-center">
+  <div class="container flex justify-between items-center pl-3">
+    <div class="py-3">
+      <h3 class="font-display"><a href="/home">Wollfeuer</a></h3>
+      <address class="not-italic text-sm">Susan Wales<br>Altthymener Dorfstr. 16<br>16798 Atthymen<br><a class="hover:underline underline-offset-2 hover:text-barley-corn-100" href="tel:+4915150715645">tel: 0151 50715645</a><br><a class="hover:underline underline-offset-2 hover:text-barley-corn-100" href="mailto:suwa0405@yahoo.de">mail: suwa0405@yahoo.de</a></address>
+    </div>
+    <div><Image src={Spiral} alt="Spirale"/></div>
+  </div>
+</footer>
