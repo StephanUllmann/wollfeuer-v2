@@ -18,6 +18,27 @@ import { Image } from "@astrojs/image/components";
         >
       </address>
     </div>
+    <div class="flex flex-col gap-3 md:mb-7 md:flex-row md:gap-10 md:self-end">
+      <a
+        class="w-12 cursor-pointer break-words text-center text-sm underline-offset-2 transition-all duration-200 hover:text-barley-corn-400 hover:underline">
+        <img src="/insta.webp" alt="Logo und Link zu instagram" class="mb-2" />
+        <p class="hidden w-full md:inline">Insta<wbr />gram</p>
+      </a>
+      <a
+        class="w-12 cursor-pointer break-words text-center text-xl underline-offset-2 transition-all duration-200 hover:text-barley-corn-400 hover:underline">
+        <img src="/etsy.webp" alt="Logo und Link zum etsy shop" class="mb-2" />
+        <p class="hidden w-full pt-1 md:inline">Etsy</p>
+      </a>
+      <a
+        class="w-12 cursor-pointer break-words text-center text-sm underline-offset-2 transition-all duration-200 hover:text-barley-corn-400 hover:underline">
+        <img
+          src="/facebook.webp"
+          alt="Logo und Link zu facebook"
+          class="mb-2"
+        />
+        <p class="hidden w-full md:inline">Face<wbr />book</p>
+      </a>
+    </div>
     <div><Image src={Spiral} alt="Spirale" /></div>
   </div>
 </footer>
