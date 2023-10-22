@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import cauldronOutlines from "../assets/cauldron-outlines.png";
-import { Image } from "@astrojs/image/components";
-import { getImage } from "@astrojs/image";
+import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
 
 const { src } = await getImage({
   src: import("../assets/wool-bg.jpg"),
@@ -23,7 +23,6 @@ const { src } = await getImage({
           src={cauldronOutlines}
           alt="Wollkessel"
           format="avif"
-          aspectRatio="470:873"
         />
       </div>
     </div>
